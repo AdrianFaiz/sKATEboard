@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <style>
+        body {
+            background-color: #05353d; /* Dark background color */
+            color: #e6cfa7; /* Light color for text */
+            font-family: 'Arial', sans-serif; /* Font for the text */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Style for the text */
+        h1 {
+            font-size: 36px; /* Large font size */
+            font-weight: bold; /* Make text bold */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Add spacing between letters */
+            color: #e6cfa7; /* Text color */
+            margin-top: 30px; /* Margin from the top */
+            margin-left: 20px; /* Margin from the left */
+            margin-right: 20px; /* Margin from the right */
+        }
+
+        /* Style for buttons */
+        .quiz-btn {
+            background-color: black; /* Button color */
+            color: #e6cfa7; /* Text color */
+            border: none;
+            border-radius: 8px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for better click area */
+            font-size: 18px; /* Text size */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin: 10px; /* Spacing between buttons */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        /* Hover effect for buttons */
+        .quiz-btn:hover {
+            background-color: red; /* Change to red on hover */
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex; /* Use flexbox to align buttons */
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center; /* Center buttons horizontally */
+            margin-top: 30px; /* Space from the title */
+        }
+
+        /* Style for the message and new button */
+        .message {
+            color: red; /* Text color for the message */
+            font-size: 20px;
+            font-weight: bold;
+            display: none; /* Initially hidden */
+            text-align: center;
+        }
+
+        .result-btn {
+            background-color: black; /* Green button */
+            color: #e6cfa7; /* Text color */
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+            cursor: pointer;         
+        }
+
+        /* Hover effect for result button */
+        .result-btn:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Who is the prettiest girl of them all?</h1>
+    <br><br>
+
+    <!-- Button container with four buttons -->
+    <div class="button-container">
+        <button class="quiz-btn" onclick="showMessage()">Bini Aiah</button>
+        <button class="quiz-btn" onclick="showMessage()">Bini Mikha</button>
+        <button class="quiz-btn" onclick="showMessage()">Bini Colet</button>
+        <button class="quiz-btn" onclick="showMessage()">Bini Sheena</button>
+    </div>
+
+    <!-- Message and results button --><br><br>
+    <div id="message" class="message">Wrong response!</div>
+    <a href="flower.html">
+        <center><button id="result-btn" class="result-btn" onclick="seeResults()">See Results</button></center>
+      </a>
+
+    <script>
+        function showMessage() {
+            // Display the "wrong response" message and the "See Results" button
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('result-btn').style.display = 'inline-block';
+        }
+
+        function seeResults() {
+            // Here you can define the functionality for the "See Results" button
+            alert("Here are your results!");
+        }
+    </script>
+</body>
+</html>
